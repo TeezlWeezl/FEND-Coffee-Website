@@ -29,6 +29,10 @@ p {
   margin-top: 15px;
 }
 
+a {
+  text-decoration: none;
+}
+
 .header {
   height: 500px;
   background-image: url(../images/FEND-Coffee-latte-art-3.webp);
@@ -71,7 +75,6 @@ p {
 
 .shop-button__link {
   display: inline-block;
-  text-decoration: none;
   color: #FFFFFF;
   font-weight: 400;
   padding: 20px 50px;
@@ -104,4 +107,66 @@ p {
 
 .img-container2 img {
   width: 80%;
+}
+
+.product-container {
+  background: #1A1A1A;
+  color: #FFFFFF;
+  padding: 60px 0 60px 0;
+  margin-top: 40px;
+}
+
+.product-container__products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around ;
+}
+
+.product-container__product {
+  margin-top: 40px;
+}
+
+.product-container__image {
+  background: white;
+  width: 155px;
+  height: 208px;
+}
+
+.product-container__image img {
+  width: 100%;
+}
+
+.product-container__label {
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 11px;
+}
+
+.product-container__price {
+  font-weight: 400;
+  font-size: 14px;
+  color: #737373;
+  margin-top: 0;
+}
+
+.product-container__icons svg {
+  margin-right: 4px;
+}
+
+.product-container__icons path {
+  stroke: white
+}
+
+.product-container__all-products-button {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.product-container__all-products-button a {
+  display: inline-block;
+  color: #FFFFFF;
+  font-weight: 400;
+  padding: 15px 45px;
+  border: #FFFFFF solid 3px;
+  border-radius: 8px;
 }
