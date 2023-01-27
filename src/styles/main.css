@@ -25,11 +25,13 @@ h3 {
 }
 
 p {
-  font-size: 14px;
+  font-size: 1.4rem;
   margin-top: 15px;
+  line-height: 18px;
 }
 
 a {
+  font-size: 1.4rem;
   text-decoration: none;
 }
 
@@ -86,10 +88,21 @@ a {
   margin: 0 24px;
 }
 
-.address-container {
+.address {
+  margin-top: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
+
+.address__container  {
+  margin-right: 34px;
+  width: 140px;
+}
+
+.address__container p {
+  margin-top: 0;
+}
+
 
 .img-container1 {
   text-align: right;
@@ -169,4 +182,125 @@ a {
   padding: 15px 45px;
   border: #FFFFFF solid 3px;
   border-radius: 8px;
+}
+
+.origin-info {
+  background-image: url(../images/FEND-Coffee-bags.webp);
+  background-size: 100%;
+  background-position: 0 20%;
+  background-repeat: no-repeat;
+  height: 332px;
+  padding-top: 84px;
+  text-align: center;
+}
+
+.origin-info__header {
+  margin: 0;
+  color: #FFFFFF;
+  font-weight: 900;
+  font-size: 32px;
+}
+
+.origin-info__content {
+  color: #FFFFFF;
+  margin: 12px 67px 0 67px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.origin-info__link {
+  display: block;
+  margin-top: 20px;
+  color: #FFFFFF;
+  font-weight: 400;
+}
+
+.ingredients {
+  text-align: center;
+}
+
+.ingredients__header {
+  margin-top: 60px;
+}
+
+.ingredients__img-container {
+  margin-top: 35px;
+  text-align: center;
+}
+
+.ingredients__img {
+  width: 214px;
+  margin: auto;
+}
+
+.ingredients__img img {
+  width: 100%;
+}
+
+.selling-points {
+  margin-top: 44px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.selling-points p {
+  margin-top: 23px;
+}
+
+.shop-button--mod {
+  margin-top: 44px;
+} 
+
+.location__heading {
+  margin-top: 72px;
+}
+
+.location__map {
+  background-image: url(../images/Map.webp);
+  height: 231px;
+  background-size: cover;
+  margin-top: 35px;
+}
+
+.footer {
+  background: #000000;
+  color: #FFFFFF;
+  padding-top: 61px;
+  padding-bottom: 51px;
+}
+
+.footer__logo svg {
+  stroke: #FFFFFF;
+}
+
+.footer__cafe-name {
+  margin-top: 15px;
+  font-weight: 900;
+  font-size: 2.4rem;
+}
+
+.footer__cafe-description {
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+.address--mod {
+  margin-top: 34px;
+}
+
+.footer__links {
+  margin-top: 34px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.footer_link-container {
+  margin-right: 34px;
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_link-container a {
+  color: #FFFFFF;
 }
