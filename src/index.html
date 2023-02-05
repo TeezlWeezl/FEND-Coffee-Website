@@ -15,13 +15,33 @@
 
 <body>
   <header class="hero">
-    <div class="nav-bar">
-      <a href="#" class="nav-bar__icon">
+    <div class="nav-bar media-flex-navbar">
+      <a href="#" class="nav-bar__icon media-flex-navbar__item logo">
         <img src="./images/icons/Logo.svg" alt="">
       </a>
-      <a href="#" class="nav-bar__icon">
-        <img src="./images/icons/Burger Menu.svg" alt="">
-      </a>
+      <div class="media-flex-navbar__item menu-links">
+        <div class="menu-links__item">
+          <a href="#" class="nav-bar__icon link-cafe">
+            Das Café
+          </a>
+        </div>
+        <div class="menu-links__item">
+          <a href="#" class="nav-bar__icon link-origin">
+            Herkunft
+          </a>
+        </div>
+        <div class="menu-links__item">
+          <a href="#" class="nav-bar__icon link-shop">
+            Shop
+            <img src="./images/icons/Vector 1.svg" alt="">
+          </a>
+        </div>
+        <div class="menu-links__item">
+          <a href="#" class="nav-bar__icon">
+            <img src="./images/icons/Burger Menu.svg" alt="">
+          </a>
+        </div>
+      </div>
     </div>
     <h1 class="coffee-heading">Rustica</h1>
     <h2 class="coffee-subheading">Bio und Fair seit 1991</h2>
@@ -30,28 +50,38 @@
     </div>
   </header>
   <div class="text-container">
-    <h2>Rösterei & Café</h2>
-    <p>Kaffee aus Kiel, direkt gehandelt und geröstet in der eigenen Rösterei, serviert im gemütlichen Café in der
-      Innenstadt.</p>
-    <div class="address">
-      <div class="address__container">
-        <p>Komm uns besuchen!</p>
-        <p>Fraunhoferstr. 13, Kiel</p>
+    <div class="media-flex">
+      <div class="media-flex__text">
+        <h2>Rösterei & Café</h2>
+        <p>Kaffee aus Kiel, direkt gehandelt und geröstet in der eigenen Rösterei, serviert im gemütlichen Café in der
+          Innenstadt.</p>
+        <div class="address">
+          <div class="address__container">
+            <p>Komm uns besuchen!</p>
+            <p>Fraunhoferstr. 13, Kiel</p>
+          </div>
+          <div class="address__container">
+            <p>Mo – Fr 8–18 Uhr</p>
+            <p>Sa 11–18 Uhr</p>
+          </div>
+        </div>
       </div>
-      <div class="address__container">
-        <p>Mo – Fr 8–18 Uhr</p>
-        <p>Sa 11–18 Uhr</p>
+      <div class="img-container1 media-flex__img">
+        <img src="./images/FEND-Coffee-shop.webp" alt="">
       </div>
     </div>
-    <div class="img-container1">
-      <img src="./images/FEND-Coffee-shop.webp" alt="">
-    </div>
-    <h3>Bio und Fair</h3>
-    <p>Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. Weit hinten,
-      hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. Und das alles in bester Bio
-      Qualität</p>
-    <div class="img-container2">
-      <img src="./images/FEND-coffee-plant.webp" alt="">
+    <div class="media-flex">
+      <div class="media-flex__text">
+        <h3>Bio und Fair</h3>
+        <p>Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. Weit
+          hinten,
+          hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. Und das alles in bester
+          Bio
+          Qualität</p>
+      </div>
+      <div class="img-container2 media-flex__img">
+        <img src="./images/FEND-coffee-plant.webp" alt="">
+      </div>
     </div>
   </div>
   <div class="product-container">
@@ -114,75 +144,85 @@
   </div>
   <div class="origin-info">
     <h3 class="origin-info__header">Herkunft</h3>
-    <p class="origin-info__content">Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben
+    <p class="origin-info__content">Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien
+      leben
       die Blindtexte. Und das alles
       in bester Bio Qualität</p>
     <a href="#" class="origin-info__link">mehr</a>
   </div>
   <div class="ingredients text-container">
     <h2 class="ingredients__header">Das steckt drin</h2>
-    <div class="ingredients__img">
-      <img src="./images/FEND_Coffee_Costa-Rica 2.webp" alt="">
-    </div>
-    <div class="selling-points">
-      <div class="selling-point">
-        <img src="./images/icons/Group-2.svg" alt="">
-        <p class="selling-point__text">
-          Bester Geschmack
-        </p>
+    <div class="media-flex-ingredients">
+      <div class="ingredients__img">
+        <img src="./images/FEND_Coffee_Costa-Rica 2.webp" alt="">
       </div>
-      <div class="selling-point">
-        <div class="selling-point__icon">
-          <img src="./images/icons/Icon Kaffee Schaufel.svg" alt="">
+      <div class="media-flex-selling-points">
+        <div class="selling-points">
+          <div class="selling-point">
+            <img src="./images/icons/Group-2.svg" alt="">
+            <p class="selling-point__text">
+              Bester Geschmack
+            </p>
+          </div>
+          <div class="selling-point">
+            <div class="selling-point__icon">
+              <img src="./images/icons/Icon Kaffee Schaufel.svg" alt="">
+            </div>
+            <p class="selling-point__text">
+              Fair gehandelt
+            </p>
+          </div>
+          <div class="selling-point">
+            <div class="selling-point__icon">
+              <img src="./images/icons/Icon-Kaffee Pflanze.svg" alt="">
+            </div>
+            <p class="selling-point__text">
+              Bio Qualität
+            </p>
+          </div>
         </div>
-        <p class="selling-point__text">
-          Fair gehandelt
-        </p>
-      </div>
-      <div class="selling-point">
-        <div class="selling-point__icon">
-          <img src="./images/icons/Icon-Kaffee Pflanze.svg" alt="">
+        <div class="shop-button shop-button--mod">
+          <a href="#" class="shop-button__link">zum Shop</a>
         </div>
-        <p class="selling-point__text">
-          Bio Qualität
-        </p>
       </div>
     </div>
-  </div>
-  <div class="shop-button shop-button--mod">
-    <a href="#" class="shop-button__link">zum Shop</a>
   </div>
   <div class="location">
     <div class="text-container">
       <h2 class="location__heading">Komm vorbei</h2>
     </div>
-    <iframe class="location__map" src="https://www.openstreetmap.org/export/embed.html?bbox=10.12119770050049%2C54.32378837490368%2C10.130853652954103%2C54.329037746874604&amp;layer=mapnik"></iframe>
+    <iframe class="location__map"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=10.12119770050049%2C54.32378837490368%2C10.130853652954103%2C54.329037746874604&amp;layer=mapnik"></iframe>
   </div>
   <div class="img-container"></div>
   <div class="footer">
     <div class="text-container">
       <img src="./images/icons/Logo.svg" alt="">
-      <h3 class="footer__cafe-name">Rustica</h3>
-      <h4 class="footer__cafe-description">Café & Rösterei</h4>
-      <div class="address address--mod">
-        <div class="address__container">
-          <p>Komm uns besuchen!</p>
-          <p>Fraunhoferstr. 13, Kiel</p>
+      <div class="media-flex-footer">
+        <div class="media-flex-footer__item">
+          <h3 class="footer__cafe-name">Rustica</h3>
+          <h4 class="footer__cafe-description">Café & Rösterei</h4>
         </div>
-        <div class="address__container">
-          <p>Mo – Fr 8–18 Uhr</p>
-          <p>Sa 11–18 Uhr</p>
+        <div class="address address--mod" media-flex-footer__item>
+          <div class="address__container">
+            <p>Komm uns besuchen!</p>
+            <p>Fraunhoferstr. 13, Kiel</p>
+          </div>
+          <div class="address__container">
+            <p>Mo – Fr 8–18 Uhr</p>
+            <p>Sa 11–18 Uhr</p>
+          </div>
         </div>
-      </div>
-      <div class="footer__links">
-        <div class="footer_link-container">
-          <a href="#">Impressum</a>
-          <a href="#">Datenschutz</a>
-        </div>
-        <div class="footer_link-container">
-          <a href="#">Café</a>
-          <a href="#">Shop</a>
-          <a href="#">Herkunft</a>
+        <div class="footer__links media-flex-footer__item">
+          <div class="footer_link-container legal-info">
+            <a href="#">Impressum</a>
+            <a href="#">Datenschutz</a>
+          </div>
+          <div class="footer_link-container cafe-info">
+            <a href="#">Café</a>
+            <a href="#">Shop</a>
+            <a href="#">Herkunft</a>
+          </div>
         </div>
       </div>
     </div>

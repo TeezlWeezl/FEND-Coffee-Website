@@ -26,7 +26,6 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
-  /* margin: 0; */
 }
 
 h2 {
@@ -37,6 +36,7 @@ h2 {
 
 h3 {
   margin-top: 30px;
+  // font-size: 4.2rem;
 }
 
 p {
@@ -52,7 +52,8 @@ a {
 
 .hero {
   height: 75vh;
-  background: radial-gradient(rgba($color: #453636, $alpha: .2), rgba($color: #453636, $alpha: .6)), url(../images/FEND-Coffee-latte-art-3.webp) center/cover no-repeat, #453636;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../images/FEND-Coffee-latte-art-3.webp) center/cover no-repeat, #453636;
   // background-image: url(../images/FEND-Coffee-latte-art-3.webp);
   // background-size: cover;
   // background-repeat: no-repeat;
@@ -68,11 +69,10 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 8px 20px 8px 12px;
-  position: absolute; 
+  position: absolute;
   width: 100%;
   top: 0;
   z-index: 1;
-
 }
 
 .nav-bar__icon img {
@@ -129,6 +129,10 @@ a {
   margin: 0 24px;
 }
 
+.media-flex {
+  display: block;
+}
+
 .address {
   margin-top: 20px;
   display: flex;
@@ -136,9 +140,9 @@ a {
   gap: 34px;
 }
 
-.address__container {
-  width: 140px;
-}
+// .address__container {
+//   width: 140px;
+// }
 
 .address__container p {
   margin-top: 0;
@@ -171,6 +175,7 @@ a {
 }
 
 .product-container__products {
+  margin-top: 40px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -256,7 +261,7 @@ a {
   min-height: 300px;
   padding-top: 84px;
   text-align: center;
-  background-color: rgba($color: #000000, $alpha: .4);
+  background-color: rgba($color: #000000, $alpha: 0.4);
   background-blend-mode: soft-light;
 }
 
@@ -269,9 +274,9 @@ a {
 
 .origin-info__content {
   color: white;
-  margin: 12px 67px 0 67px;
+  width: 60%;
+  margin: 12px auto;
   font-weight: 400;
-  font-size: 1.4rem;
 }
 
 .origin-info__link {
@@ -288,7 +293,6 @@ a {
 .ingredients__header {
   margin-top: 60px;
 }
-
 
 .ingredients__img {
   width: 50%;
@@ -370,10 +374,226 @@ a {
   color: white;
 }
 
-@include media(">=phone", '<=test') {
-  .product-container__image {
-    background: green;
-    width: 130px;
-    height: 174px;
+// @include media(">=phone", "<=test") {
+//   .product-container__image {
+//     background: green;
+//     width: 130px;
+//     height: 174px;
+//   }
+// }
+
+@include media("<desktop") {
+
+.nav-bar__icon.link-cafe,
+.nav-bar__icon.link-origin,
+.nav-bar__icon.link-shop {
+  display: none;
+}
+}
+
+@include media(">=desktop") {
+  h2 {
+    font-size: 4.8rem;
+  }
+
+  h3 {
+    font-size: 4.2rem;
+  }
+
+  p {
+    font-size: 1.8rem;
+    line-height: 24px;
+  }
+
+  a {
+    font-size: 1.8rem;
+  }
+
+  .nav-bar__icon {
+    color: white;
+  }
+
+  .nav-bar__icon.link-cafe,
+  .nav-bar__icon.link-origin,
+  .nav-bar__icon.link-shop {
+    visibility: visible;
+    position: relative;
+  }
+
+  .media-flex-navbar__item.menu-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .nav-bar__icon.link-origin::before
+  {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 1px;
+    bottom: -3px;
+    left: 0%;
+    border-bottom: 1px solid white;
+  }
+  
+  .nav-bar__icon.link-shop::before
+  {
+    content: "";
+    position: absolute;
+    width:40px;
+    height: 1px;
+    bottom: 2px;
+    left: 0%;
+    border-bottom: 1px solid white;
+  }
+
+  .nav-bar__icon.link-shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .text-container {
+    margin: 0 100px;
+  }
+
+  .media-flex {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 100px;
+    flex-wrap: nowrap;
+  }
+
+  .media-flex__text {
+    width: 40%;
+  }
+
+  .img-container1 {
+    width: 50%;
+  }
+
+  .img-container1 img {
+    width: 100%;
+  }
+
+  .img-container2 {
+    width: 50%;
+    order: -1;
+  }
+
+  .img-container2 img {
+    width: 100%;
+  }
+
+  .product-container {
+    margin-top: 100px;
+  }
+
+  .product-container__products {
+    flex-wrap: nowrap;
+    gap: 15px;
+  }
+
+  .product-container {
+    padding-bottom: 250px;
+  }
+
+  .product-container__product {
+    width: 25%;
+    margin-top: 80px;
+  }
+
+  .product-container__all-products-button {
+    bottom: 130px;
+  }
+
+  .origin-info {
+    background-position: 0 35%;
+  }
+
+  .origin-info__content {
+    margin: 35px auto;
+    width: 30%;
+  }
+
+  .ingredients__header {
+    margin-top: 120px;
+  }
+
+  .ingredients__img {
+    width: 50%;
+    margin: 0;
+    margin-top: 35px;
+    transform: translate(-30%);
+  }
+
+  .media-flex-ingredients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+  }
+
+  .selling-points {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .media-flex-selling-points {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+  }
+
+  .shop-button--mod {
+    margin: 0;
+    transform: translate(0);
+  }
+
+  .location__heading {
+    margin-top: 100px;
+  }
+
+  .footer {
+    padding: 120px 0;
+  }
+
+  .media-flex-footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15vw;
+  }
+
+  .media-flex-footer__item h4 {
+    margin-top: 15px;
+  }
+
+  .address--mod {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .footer__links {
+    margin: 0;
+    gap: 15vw;
+  }
+
+  .footer_link-container {
+    width: 10px;
+  }
+
+  .footer__links .cafe-info {
+    order: -1;
   }
 }
