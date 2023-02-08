@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+  font-weight: 900;
+  margin-top: 40px;
+}
+
+h3 {
+  margin-top: 30px;
+  font-size: 3.2rem;
+}
+
+p {
+  font-size: 1.4rem;
+  margin-top: 15px;
+  line-height: 18px;
+}
+
+a {
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+
+.text-container {
+  margin: 0 24px;
+}
+
+.address {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 34px;
+}
+
+.address__container p {
+  margin-top: 0;
+}
+
+
+.footer {
+  background: #000000;
+  color: white;
+  padding-top: 60px;
+  padding-bottom: 51px;
+}
+
+.footer img {
+  width: 50px;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+
+.footer__cafe-name {
+  margin-top: 15px;
+  font-weight: 900;
+  font-size: 2.4rem;
+}
+
+.footer__cafe-description {
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+.address--mod {
+  margin-top: 34px;
+}
+
+.footer__links {
+  margin-top: 34px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 34px;
+}
+
+.footer_link-container {
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_link-container a {
+  color: white;
+}
