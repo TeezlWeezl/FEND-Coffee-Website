@@ -1,22 +1,12 @@
 @import "../../node_modules/include-media/dist/include-media";
 @import "./shared/settings";
 @import "./shared/base";
+@import "./shared/shared";
 
 .hero {
   height: 50vh;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(../images/FEND-Coffee-shop.webp) center/cover no-repeat, #453636;
-}
-
-.nav-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 20px 8px 12px;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  z-index: 1;
 }
 
 .nav-bar {

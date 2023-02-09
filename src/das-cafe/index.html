@@ -14,34 +14,7 @@
 
 <body>
   <header class="hero">
-    <div class="nav-bar media-flex-navbar">
-      <a href="#" class="nav-bar__icon media-flex-navbar__item logo">
-        <img src="../images/icons/Logo.svg" alt="">
-      </a>
-      <div class="media-flex-navbar__item menu-links">
-        <div class="menu-links__item">
-          <a href="#" class="nav-bar__icon link-cafe">
-            Das Café
-          </a>
-        </div>
-        <div class="menu-links__item">
-          <a href="#" class="nav-bar__icon link-origin">
-            Herkunft
-          </a>
-        </div>
-        <div class="menu-links__item">
-          <a href="#" class="nav-bar__icon link-shop">
-            Shop
-            <img src="#r 1.svg" alt="">
-          </a>
-        </div>
-        <div class="menu-links__item">
-          <a href="#" class="nav-bar__icon burger-menu">
-            <img src="../images/icons/Burger Menu.svg" alt="">
-          </a>
-        </div>
-      </div>
-    </div>
+    {{> navbar}}
   </header>
   <div class="text-container">
     <h2>Rösterei & Café</h2>
@@ -107,38 +80,7 @@
       src="https://www.openstreetmap.org/export/embed.html?bbox=10.119502544403076%2C54.321886172505536%2C10.129158496856691%2C54.32691054933897&amp;layer=mapnik&amp;marker=54.32439530913191%2C10.124330520629883"></iframe>
   </div>
   <div class="img-container"></div>
-  <div class="footer">
-    <div class="text-container">
-      <img src="../images/icons/Logo.svg" alt="">
-      <div class="media-flex-footer">
-        <div class="media-flex-footer__item">
-          <h3 class="footer__cafe-name">Rustica</h3>
-          <h4 class="footer__cafe-description">Café & Rösterei</h4>
-        </div>
-        <div class="address address--mod" media-flex-footer__item>
-          <div class="address__container">
-            <p>Komm uns besuchen!</p>
-            <p>Fraunhoferstr. 13, Kiel</p>
-          </div>
-          <div class="address__container">
-            <p>Mo – Fr 8–18 Uhr</p>
-            <p>Sa 11–18 Uhr</p>
-          </div>
-        </div>
-        <div class="footer__links media-flex-footer__item">
-          <div class="footer_link-container legal-info">
-            <a href="#">Impressum</a>
-            <a href="#">Datenschutz</a>
-          </div>
-          <div class="footer_link-container cafe-info">
-            <a href="#">Café</a>
-            <a href="#">Shop</a>
-            <a href="#">Herkunft</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  {{> footer}}
 </body>
 
 </html>
