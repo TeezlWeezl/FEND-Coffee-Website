@@ -1,5 +1,10 @@
 .text-container {
   margin: 0 24px;
+
+
+  @include media(">=desktop") {
+    margin: 0 100px;
+  }
 }
 
 .nav-bar {

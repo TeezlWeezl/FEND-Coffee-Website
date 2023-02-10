@@ -61,7 +61,7 @@
   background: lighten($color: $off-black, $amount: 20%);
 }
 
-.media-flex {
+.media-flex-text-img {
   display: block;
 }
 
@@ -248,11 +248,7 @@
 }
 
 @include media(">=desktop") {
-  .text-container {
-    margin: 0 100px;
-  }
-
-  .media-flex {
+  .media-flex-text-img {
     margin-top: 100px;
     display: flex;
     flex-wrap: wrap;
@@ -261,7 +257,7 @@
     flex-wrap: nowrap;
   }
 
-  .media-flex__text {
+  .media-flex-text-img__text {
     width: 40%;
   }
 
