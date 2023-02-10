@@ -1,0 +1,18 @@
+@import "../../node_modules/include-media/dist/include-media";
+@import "./shared/settings";
+@import "./shared/base";
+@import "./shared/shared";
+
+.hero {
+  height: 50vh;
+  background: url(../images/FEND-Coffee-beans-hand-2.webp) center/cover no-repeat;
+}
+
+.herkunft-info__heading,
+.herkunft-info__text {
+  @include media(">=desktop") {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -11,7 +11,8 @@ module.exports = defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'src/index.html'),
-        nested: resolve(__dirname, 'src/das-cafe/index.html')
+        nested: resolve(__dirname, 'src/das-cafe/index.html'),
+        nested: resolve(__dirname, 'src/herkunft/index.html')
       }
     }
   },
