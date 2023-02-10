@@ -247,88 +247,7 @@
   margin-top: 35px;
 }
 
-@include media("<desktop") {
-
-.nav-bar__icon.link-cafe,
-.nav-bar__icon.link-origin,
-.nav-bar__icon.link-shop {
-  display: none;
-}
-}
-
 @include media(">=desktop") {
-  h2 {
-    font-size: 4.8rem;
-  }
-
-  h3 {
-    font-size: 4.2rem;
-  }
-
-  p {
-    font-size: 1.8rem;
-    line-height: 24px;
-  }
-
-  a {
-    font-size: 1.8rem;
-  }
-
-  .nav-bar__icon {
-    color: white;
-  }
-
-  .nav-bar__icon.logo {
-    margin-left: 60px;
-  }
-
-  .nav-bar__icon.burger-menu {
-    display: none;
-  }
-
-  .nav-bar__icon.link-cafe,
-  .nav-bar__icon.link-origin,
-  .nav-bar__icon.link-shop {
-    visibility: visible;
-    position: relative;
-  }
-
-  .media-flex-navbar__item.menu-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
-  }
-
-  .nav-bar__icon.link-origin::before
-  {
-    content: "";
-    position: absolute;
-    width: 40px;
-    height: 1px;
-    bottom: -3px;
-    left: 0%;
-    border-bottom: 1px solid white;
-  }
-  
-  .nav-bar__icon.link-shop::before
-  {
-    content: "";
-    position: absolute;
-    width:40px;
-    height: 1px;
-    bottom: 2px;
-    left: 0%;
-    border-bottom: 1px solid white;
-  }
-
-  .nav-bar__icon.link-shop {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
-
   .text-container {
     margin: 0 100px;
   }
@@ -435,38 +354,5 @@
 
   .location__heading {
     margin-top: 100px;
-  }
-
-  .footer {
-    padding: 120px 0;
-  }
-
-  .media-flex-footer {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 15vw;
-  }
-
-  .media-flex-footer__item h4 {
-    margin-top: 15px;
-  }
-
-  .address--mod {
-    flex-direction: column;
-    margin: 0;
-  }
-
-  .footer__links {
-    margin: 0;
-    gap: 15vw;
-  }
-
-  .footer_link-container {
-    width: 10px;
-  }
-
-  .footer__links .cafe-info {
-    order: -1;
   }
 }
