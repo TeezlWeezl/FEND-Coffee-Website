@@ -2,8 +2,6 @@
 ------------
 
 - Häufig verwendete Komponenten durch Handlebars ersetzen
- - Navbar
- - Footer
  - (opt) Buttons 
  - (opt) Adresse & Öffnungszeiten
 
