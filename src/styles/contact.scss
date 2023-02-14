@@ -1,0 +1,25 @@
+@import "../../node_modules/include-media/dist/include-media";
+@import "./shared/settings";
+@import "./shared/base";
+@import "./shared/shared";
+
+// Black color for the NavBar
+.nav-bar {
+  .nav-bar__icon img {
+    filter: invert(0%) sepia(100%) saturate(7429%) hue-rotate(235deg) brightness(83%) contrast(115%);
+    width: 30px;
+    height: 30px;
+  }
+
+  @include media(">=desktop") {
+    .nav-bar__icon {
+      color: black;
+    }
+
+    .nav-bar__icon.link-origin::before,
+    .nav-bar__icon.link-shop::before {
+      border-bottom: 1px solid black;
+    }
+  }
+}
+
