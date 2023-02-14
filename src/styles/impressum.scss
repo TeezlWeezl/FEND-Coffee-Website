@@ -25,3 +25,49 @@
 
 // Styling of content
 
+.imprint {
+  h2 {
+    margin-top: 120px;
+  }
+
+  @include media(">=desktop") {
+    h2 {
+      margin-top: 219px;
+    }
+  }
+}
+
+.privacy-policy {
+  padding-bottom: 122px;
+  
+  h2 {
+    margin-top: 30px;
+  }
+
+  h3 {
+    margin-top: 30px;
+  }
+  
+  h4 {
+    font-size: 3.0rem;
+    margin-top: 20px;
+  }
+
+  p {
+    margin-top: 0;
+  }
+
+  ul {
+    li {
+      list-style: none;
+      font-size: 1.4rem;
+      margin: 16px 0 16px 10px;
+      margin-left: 14px;
+    }
+    li:before {
+      content: "-";
+      position: absolute;
+      margin-left: -10px;
+    }
+  }
+}
