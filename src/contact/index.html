@@ -9,33 +9,32 @@
   <link rel="stylesheet" href="../styles/contact.scss">
 </head>
 
-<body style="margin-top: 200px;">
+<body>
   {{> navbar}}
-  <div class="text-container">
+  <div class="text-container contact-form">
     <h2>Du hast Fragen? Schreib uns gern!</h2>
+    <form action="" onsubmit="formSuc()">
+      <label class="name-label" for="name">Name*</label>
+      <input class="name-input" type="text" name="name" id="name" placeholder="Name">
+      <label class="email-label" for="email">E-Mail*</label>
+      <input class="email-input" type="email" name="email" id="email" placeholder="E-Mail">
+      <label class="phone-label" for="phone">Telefonnummer</label>
+      <input class="phone-input" type="text" name="phone" id="phone" placeholder="Telefonnummer">
+      <select class="subject-select" name="subject" id="subject">
+        <option value="" disabled selected>Dein Betreff</option>
+        <option value="0">Frage zur Lieferung</option>
+        <option value="1">Frage zum Produkt</option>
+        <option value="2">Vertriebsfragen</option>
+        <option value="3">einfach nur so!</option>
+      </select>
+      <label class="message-label" for="message">Deine Nachricht</label>
+      <textarea class="message-text" name="message" id="message" cols="30" rows="10" placeholder="Was hast du auf dem Herzen?"></textarea>
+      <input class="privacy-policy-input" type="checkbox" name="privacy-policy">
+      <label class="privacy-policy-label" for="privacy-policy">Ich aktzeptiere die Datenschutzerklärung</label>
+      <button class="submit-button" type="submit" onclick="formSuc">abschicken</button>
+    </form>
   </div>
-  <form action="" onsubmit="formSuc()">
-    <label for="name">Name*</label>
-    <input type="text" name="name" id="name" placeholder="Name">
-    <label for="email">E-Mail*</label>
-    <input type="email" name="email" id="email" placeholder="E-Mail">
-    <label for="phone">Telefonnummer</label>
-    <input type="text" name="phone" id="phone" placeholder="Telefonnummer">
-    <select name="subject" id="subject">
-      <option value="" disabled selected>Dein Betreff</option>
-      <option value="0">Frage zur Lieferung</option>
-      <option value="1">Frage zum Produkt</option>
-      <option value="2">Vertriebsfragen</option>
-      <option value="3">einfach nur so!</option>
-    </select>
-    <label for="message">Deine Nachricht</label>
-    <textarea name="message" id="message" cols="30" rows="10" placeholder="Was hast du auf dem Herzen?"></textarea>
-    <input type="checkbox" name="privacy-policy">
-    <label for="privacy-policy">Ich aktzeptiere die Datenschutzerklärung</label>
-    <button type="submit" onclick="formSuc">abschicken</button>
-  </form>
   {{> footer}}
-
   <script>
     let formSuc = () => {
       alert("Form Clicked");
