@@ -13,7 +13,8 @@ module.exports = defineConfig({
         main: resolve(__dirname, 'src/index.html'),
         cafe: resolve(__dirname, 'src/das-cafe/index.html'),
         herkunft: resolve(__dirname, 'src/herkunft/index.html'),
-        impressum: resolve(__dirname, 'src/impressum/index.html')
+        impressum: resolve(__dirname, 'src/impressum/index.html'),
+        contact: resolve(__dirname, 'src/contact/index.html')
       }
     }
   },
