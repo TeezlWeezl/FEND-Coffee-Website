@@ -1,7 +1,9 @@
 @import "../../node_modules/include-media/dist/include-media";
 @import "./shared/settings";
 @import "./shared/base";
-@import "./shared/shared";
+@import "./shared/shared"; 
+@import "./shared/navbar";
+@import "./shared/footer";
 
 // Black color for the NavBar
 .nav-bar {

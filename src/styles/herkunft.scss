@@ -2,6 +2,8 @@
 @import "./shared/settings";
 @import "./shared/base";
 @import "./shared/shared";
+@import "./shared/navbar";
+@import "./shared/footer";
 
 .hero {
   height: 50vh;
@@ -71,7 +73,6 @@
     .growing-regions__flex4 {
       width: 60%;
       order: 4;
-      
     }
 
     .growing-regions__flex5 {

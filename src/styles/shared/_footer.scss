@@ -1,0 +1,76 @@
+.footer {
+  background: #000000;
+  color: white;
+  padding-top: 60px;
+  padding-bottom: 51px;
+
+  img {
+    width: 50px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+  }
+
+  .footer__cafe-name {
+    margin-top: 15px;
+    font-weight: 900;
+    font-size: 2.4rem;
+  }
+
+  .footer__cafe-description {
+    font-weight: 400;
+    font-size: 1.8rem;
+  }
+
+  .address--footer {
+    margin-top: 34px;
+  }
+
+  .footer__links {
+    margin-top: 34px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 34px;
+  }
+
+  .footer_link-container {
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer_link-container a {
+    color: white;
+  }
+
+  @include media(">=desktop") {
+    padding: 120px 0;
+
+    .media-flex-footer {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 15vw;
+    }
+
+    .media-flex-footer__item h4 {
+      margin-top: 15px;
+    }
+
+    .address--footer {
+      flex-direction: column;
+      margin: 0;
+    }
+
+    .footer__links {
+      margin: 0;
+      gap: 15vw;
+    }
+
+    .footer_link-container {
+      width: 10px;
+    }
+
+    .footer__links .cafe-info {
+      order: -1;
+    }
+  }
+}
