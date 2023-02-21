@@ -24,6 +24,11 @@
 }
 
 // Styling of content
+.text-container {
+  @include media(">=desktop") {
+    margin: 0 310px;
+  }
+}
 
 .imprint {
   h2 {
