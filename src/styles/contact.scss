@@ -1,8 +1,9 @@
 @import "../../node_modules/include-media/dist/include-media";
 @import "./shared/settings";
 @import "./shared/base";
-@import "./shared/shared"; 
+@import "./shared/shared";
 @import "./shared/navbar";
+@import "./shared/footer";
 
 // Black color for the NavBar
 .nav-bar {
@@ -51,7 +52,7 @@
   }
 
   .name-input {
-    background-color: #E9E9E9;
+    background-color: #e9e9e9;
   }
 
   .email-label {
@@ -62,8 +63,74 @@
     margin-top: 40px;
   }
 
-  .subject-select {
+  .select-wraper {
+    position: relative;
+    border: 2px solid black;
+    border-radius: 5px;
     margin-top: 40px;
+
+    .subject-select {
+      padding: 15px 0px 14px 25px;
+      width: 100%;
+      background-color: transparent;
+      color: #737373;
+
+      &:hover {
+        color: black;
+      }
+
+      &:focus {
+        color: white;
+
+        & option {
+          color: black;
+          margin-top: 30px;
+        }
+      }
+    }
+
+    .select-arrow {
+      font-size: 32px;
+      font-weight: 400;
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      background-color: black;
+      width: 50px;
+      height: 100%;
+      text-align: center;
+      z-index: -1;
+
+      span {
+        transform: rotate(90deg) translateY(-3px);
+      }
+    }
+
+    .select-content {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: calc(100% - 50px);
+      height: 100%;
+      background-color: white;
+      z-index: -1;
+    }
+
+    .subject-select:focus {
+      & + .select-content {
+        background-color: black;
+      }
+
+      & + .select-arrow { // Not working????
+        span {
+          transform: rotate(90deg);
+        }
+      }
+    }
   }
 
   .message-label {
