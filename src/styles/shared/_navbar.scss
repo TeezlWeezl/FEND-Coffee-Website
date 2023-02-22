@@ -8,11 +8,24 @@
   top: 0;
   z-index: 1;
 
-  .nav-bar__icon.link-cafe,
-  .nav-bar__icon.link-origin,
-  .nav-bar__icon.link-shop {
+  // .nav-bar__icon.link-cafe,
+  // .nav-bar__icon.link-origin,
+  // .nav-bar__icon.link-shop {
+  //   display: none;
+  // }
+
+  .nav-links {
     display: none;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Make sure the div is on top of other content */
   }
+
+
 
   .nav-bar__icon img {
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);

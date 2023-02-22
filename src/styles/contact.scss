@@ -125,16 +125,16 @@
         background-color: black;
       }
 
-      & + .select-arrow { // Not working????
+      & + .select-content + .select-arrow { // Not working????
         span {
-          transform: rotate(90deg);
+          transform: rotate(270deg) translateY(-3px);
         }
       }
     }
   }
 
   .message-label {
-    margin-top: 195px;
+    margin-top: 40px;
   }
 
   .privacy-policy-input {
