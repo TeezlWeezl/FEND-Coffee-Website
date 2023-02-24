@@ -2,27 +2,30 @@
   <a href="../" class="nav-bar__icon media-flex-navbar__item logo">
     <img src="/images/icons/Logo.svg" alt="">
   </a>
-  <div class="media-flex-navbar__item menu-links">
-    <div class="nav-links">
-      <div class="menu-links__item">
-        <a href="../das-cafe/" class="nav-bar__icon link-cafe">
-          Das Café
-        </a>
+  <div class="media-flex-navbar__item menu">
+    <div class="nav-links" id="nav-links">
+        <div class="menu-item burger-menu-close" id="burger-menu-close">
+          <a onclick="toggleMobileNavbar()"><img src="../images/icons/burger-menu-close.svg" alt=""></a>
+        </div>
+        <div class="menu__item">
+          <a href="../das-cafe/" class="nav-bar__icon link-cafe">
+            Das Café
+          </a>
+        </div>
+        <div class="menu__item">
+          <a href="../herkunft/" class="nav-bar__icon link-origin">
+            Herkunft
+          </a>
+        </div>
+        <div class="menu__item">
+          <a href="#" class="nav-bar__icon link-shop">
+            Shop
+            <img id="shopping-cart-icon" src="../images/icons/Vector 1.svg" alt="">
+          </a>
+        </div>
       </div>
-      <div class="menu-links__item">
-        <a href="../herkunft/" class="nav-bar__icon link-origin">
-          Herkunft
-        </a>
-      </div>
-      <div class="menu-links__item">
-        <a href="#" class="nav-bar__icon link-shop">
-          Shop
-          <img src="../images/icons/Vector 1.svg" alt="">
-        </a>
-      </div>
-    </div>
-    <div class="menu-links__item">
-      <a class="nav-bar__icon burger-menu" onclick="toggleMobileNavbar()" >
+    <div class="menu__item" id="burger-menu">
+      <a class="nav-bar__icon burger-menu" onclick="toggleMobileNavbar()">
         <img src="/images/icons/Burger Menu.svg" alt="">
       </a>
     </div>
