@@ -121,11 +121,11 @@
     }
 
     .subject-select:focus {
-      & + .select-content {
+      & + .select-content { // + (plus sign): selects an element immediately following another element
         background-color: black;
       }
 
-      & + .select-content + .select-arrow { // Not working????
+      & ~ .select-arrow { // ~ (tilde): selects all elements that follow another element, regardless of their 
         span {
           transform: rotate(270deg) translateY(-3px);
         }
@@ -137,17 +137,58 @@
     margin-top: 40px;
   }
 
-  .privacy-policy-input {
-    display: inline;
-    margin-top: 41px;
+  .message-text {
+    min-width: 100%;
+    height: 170px;
+    border: none;
+    border-bottom: 2px solid;
+    resize: none;
+    margin-top: 10px;
+    padding: 50px 20px;
+
+    &:focus {
+      padding-top: 20px;
+
+      &::placeholder {
+      color: transparent;
+      }
+    }
   }
 
-  .privacy-policy-label {
-    display: inline-block;
+  .privacy-policy {
     margin-top: 41px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .privacy-policy__input {
+    width: 5%;
   }
 
   .submit-button {
     margin-top: 41px;
+    margin-left: 50%;
+    transform: translate(-50%);
+    border: none;
+    width: 171px;
+    display: inline-block;
+    color: white;
+    font-weight: 400;
+    padding: 20px 50px;
+    background: $off-black;
+    border-radius: 8px;
+  }
+
+  .submit-button:hover {
+    background: lighten($color: $off-black, $amount: 10%);
+  }
+
+  .submit-button:active {
+    background: lighten($color: $off-black, $amount: 20%);
+  }
+
+  .submit-button:focus {
+    background: lighten($color: $off-black, $amount: 20%);
   }
 }
