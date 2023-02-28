@@ -20,13 +20,15 @@
       justify-content: center;
       gap: 24px;
       top: 0;
-      left: 0;
-      transition: background-color 2s ease-in;
+      left: -100%;
+      display: flex;
+      -webkit-transition: left .3s ease-in-out;
+      -moz-transition: left .3s ease-in-out;
+      -o-transition: left .3s ease-in-out;
+      transition: left .3s ease-in-out;
 
       &.nav-links--open {
-        // NOT WORKING
-        background-color: green;
-        // left: 0;
+        left: 0
       }
 
       #burger-menu-close {
