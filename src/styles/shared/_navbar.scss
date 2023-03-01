@@ -8,6 +8,10 @@
   top: 0;
   z-index: 1;
 
+  #burger-menu-close {
+    display: none;
+  }
+
   .nav-links {
     @include media("<=desktop") {
       background-color: black;
@@ -32,6 +36,7 @@
       }
 
       #burger-menu-close {
+        display: block;
         font-size: 0;
         position: absolute;
         top: 8px;
