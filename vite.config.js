@@ -22,5 +22,8 @@ module.exports = defineConfig({
     imagetools(),
     htmlImages(),
     handlebars({partialDirectory: resolve(__dirname, 'src/components'),})
-  ]
+  ],
+  server: {
+    port: 8080,
+  }
 })

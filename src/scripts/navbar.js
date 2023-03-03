@@ -11,4 +11,3 @@ Object.entries(burgerMenu).forEach(([key, element]) => {
     }
   })
 });
-
