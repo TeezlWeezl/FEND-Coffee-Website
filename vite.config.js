@@ -14,7 +14,8 @@ module.exports = defineConfig({
         cafe: resolve(__dirname, 'src/das-cafe/index.html'),
         herkunft: resolve(__dirname, 'src/herkunft/index.html'),
         impressum: resolve(__dirname, 'src/impressum/index.html'),
-        contact: resolve(__dirname, 'src/contact/index.html')
+        contact: resolve(__dirname, 'src/contact/index.html'),
+        todoList: resolve(__dirname, 'src/todo-list/index.html')
       }
     }
   },
