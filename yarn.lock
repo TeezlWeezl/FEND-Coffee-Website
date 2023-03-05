@@ -1338,11 +1338,13 @@ __metadata:
     eslint-plugin-import: ^2.25.4
     eslint-plugin-prettier: ^4.0.0
     include-media: ^2.0.0
+    jquery: ^3.6.3
     postcss: ^8.4.5
     postcss-import: ^14.0.2
     postcss-nesting: ^10.1.1
     prettier: ^2.5.1
     sass: ^1.57.1
+    slick-carousel-latest: ^1.9.0
     vite: ^2.7.2
     vite-imagetools: ^4.0.3
     vite-plugin-handlebars: ^1.6.0
@@ -2039,6 +2041,13 @@ __metadata:
   version: 2.0.0
   resolution: "isexe@npm:2.0.0"
   checksum: 26bf6c5480dda5161c820c5b5c751ae1e766c587b1f951ea3fcfc973bafb7831ae5b54a31a69bd670220e42e99ec154475025a468eae58ea262f813fdc8d1c62
+  languageName: node
+  linkType: hard
+
+"jquery@npm:^3.6.3":
+  version: 3.6.3
+  resolution: "jquery@npm:3.6.3"
+  checksum: 0fd366bdcaa0c84a7a8751ce20f8192290141913978b5059574426d9b01f4365daa675f95aab3eec94fd794d27b08d32078a2236bef404b8ba78073009988ce6
   languageName: node
   linkType: hard
 
@@ -3014,6 +3023,15 @@ __metadata:
   dependencies:
     is-arrayish: ^0.3.1
   checksum: a7f3f2ab5c76c4472d5c578df892e857323e452d9f392e1b5cf74b74db66e6294a1e1b8b390b519fa1b96b5b613f2a37db6cffef52c3f1f8f3c5ea64eb2d54c0
+  languageName: node
+  linkType: hard
+
+"slick-carousel-latest@npm:^1.9.0":
+  version: 1.9.0
+  resolution: "slick-carousel-latest@npm:1.9.0"
+  peerDependencies:
+    jquery: ">=1.8.0"
+  checksum: 534bc48fcbaabda635c50fa6d31402e467f5e14bb0f6000a219fc499acf2a9608308f9d340a889ae7668430b058325efd40f56c789464f265003f14f1a0514ce
   languageName: node
   linkType: hard
 

@@ -1,9 +1,11 @@
 @import "../../node_modules/include-media/dist/include-media";
 @import "./shared/settings";
 @import "./shared/base";
-@import "./shared/shared"; 
+@import "./shared/shared";
 @import "./shared/navbar";
 @import "./shared/footer";
+@import "./shared/slick";
+// @import "./shared/slick-theme";
 
 .hero {
   height: 75vh;
@@ -104,6 +106,14 @@
   justify-content: space-between;
 }
 
+.slick-slide {
+  margin: 0 5px;
+
+  @include media(">=desktop") {
+    margin: 0 10px;
+  }
+}
+
 .product-container__product {
   width: 47%;
 }
@@ -131,18 +141,20 @@
   margin-top: 0;
 }
 
+.product-container__icons {
+  display: flex;
+  gap: 10px;
+}
+
 .product-container__icons img {
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
   width: 18px;
   height: 18px;
-}
 
-.product-container__icons svg {
-  margin-right: 4px;
-}
-
-.product-container__icons path {
-  stroke: white;
+  @include media(">=desktop") {
+    width: 25px;
+    height: 25px;
+  }
 }
 
 .product-container__all-products-button {
@@ -309,7 +321,6 @@
 
   .product-container__product {
     width: 25%;
-    margin-top: 80px;
   }
 
   .product-container__all-products-button {
