@@ -109,29 +109,38 @@
     width: 40px;
     height: 40px;
     font-weight: 900;
+    font-size: 3rem;
     outline: none;
 
     &.slick-prev {
-        content: "<";
+        // content: "<";
         top: 50%;
         left: 0;
         transform: translateY(-50%) translateX(-100%);
+        & span {
+            display: block;
+            transform: rotate(180deg) translateX(4%) translateY(-8%);
+        }
     }
 
     &.slick-next {
-        content: ">";
+        // content: ">";
         top: 50%;
         left: 100%;
         transform: translateY(-50%) translateX(0);
+        & span {
+            display: block;
+            transform: translateX(2%) translateY(-4%);
+        }
     }
 }
 
 .slick-prev:before {
-    content: "<";
+    // content: "<";
     font-size: 30px;
 }
 
 .slick-next:before {
-    content: ">";
+    // content: ">";
     font-size: 30px;
 }

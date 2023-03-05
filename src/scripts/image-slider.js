@@ -7,8 +7,8 @@ $(document).ready(function () {
     slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 2000,
-    prevArrow: '<button class="slick-prev"></button>',
-    nextArrow: '<button class="slick-next"></button>',
+    prevArrow: '<button class="slick-prev"><span>›</span></button>',
+    nextArrow: '<button class="slick-next"><span>›</span></button>',
     responsive: [
       {
         breakpoint: 992,
