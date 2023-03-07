@@ -54,7 +54,7 @@
   height: auto;
 
   &:hover {
-    background: $gold-brown
+    background: $gold-brown;
   }
 }
 
@@ -65,8 +65,9 @@
 .quick-add {
   display: none;
   border: none;
+  border-radius: 5px;
   padding: 10px 15px;
-  background: #FFFFFF;
+  background: #ffffff;
 
   @include media(">=desktop") {
     position: absolute;
@@ -76,17 +77,55 @@
 
   &:hover {
     display: block;
-  }
-
-  &.quick-add--clicked {
-    display: none;
+    background-color: darken($color: #FFFFFF, $amount: 10%);
   }
 }
 
-img:hover + .quick-add {
-  @include media(">=desktop") {
-    display: block;
+// img:hover + .quick-add {
+//   @include media(">=desktop") {
+//     display: block;
+//   }
+// }
+.quick-add--active {
+  display: block;
+}
+
+.quick-add--clicked {
+  display: none;
+}
+
+.spec-select {
+  display: none;
+  width: min-content;
+  position: absolute;
+  top: 85%;
+  right: 5%;
+
+  button {
+    font-weight: 900;
+    border: none;
+    padding: 10px 15px;
+    background: #ffffff;
+
+    &:hover {
+      background-color: darken($color: #FFFFFF, $amount: 10%);
+    }
   }
+
+  .quick-add-s {
+    border-radius: 5px 0 0 5px;
+  }
+  .quick-add-l {
+    border-radius: 0 5px 5px 0;
+  }
+
+  &:hover {
+    display: flex;
+  }
+}
+
+.spec-select--active {
+  display: flex;
 }
 
 .product-container__label {
