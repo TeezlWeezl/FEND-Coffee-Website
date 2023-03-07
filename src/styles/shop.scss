@@ -73,11 +73,15 @@
     top: 85%;
     right: 5%;
   }
-}
 
-// .quick-add--clicked {
-//   display: none;
-// }
+  &:hover {
+    display: block;
+  }
+
+  &.quick-add--clicked {
+    display: none;
+  }
+}
 
 img:hover + .quick-add {
   @include media(">=desktop") {
