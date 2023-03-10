@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/product.scss">
+  <title>Produkt</title>
+</head>
+
+<body>
+  {{> navbar}}
+  <div class="text-container">
+    <div class="product-overview">
+      <div class="product-overview__img">
+        <img src="../images/FEND_Coffee_Costa-Rica 2.webp" alt="" srcset="">
+      </div>
+      <div class="product-overview__specs">
+        <h2>Costa Rica</h2>
+        <p class="price">6,90€ – 26,90€</p>
+        <p class="info">Costa Rica Filterkaffee ist äußerst ergiebig und hat praktisch keine Säure. Den Gaumen
+          umschmeichelt ein
+          vollmundiges Haselnussaroma. Gleich probieren!</p>
+        <form action="" class="spec-select" onsubmit="formSuc()">
+          <div class="select-wraper">
+            <select class="spec-select__select" name="spec" id="spec">
+              <option value="" disabled selected>wie viel Kaffee brauchst du?</option>
+              <option value="250-G">250g gemahlen</option>
+              <option value="500-G">500g gemahlen</option>
+              <option value="250-B">250g Bohnen</option>
+              <option value="500-B">500g Bohnen</option>
+            </select>
+            <div class="select-content"></div>
+            <div class="select-arrow">
+              <span>›</span>
+            </div>
+          </div>
+          <button type="submit" class="spec-select__submit">In den Warenkorb</button>
+        </form>
+      </div>
+      <div class="product-overview__spec-icons">
+        <div class="spec-icons__icon">
+          <img src="../images/icons/Icon Kaffee Bohnen.svg" alt="" srcset="">
+          <p>Mild</p>
+        </div>
+        <div class="spec-icons__icon">
+          <img src="../images/icons/Icon French Press.svg" alt="" srcset="">
+          <p>Für Filterkaffee</p>
+        </div>
+        <div class="spec-icons__icon">
+          <img src="../images/icons/Icon Kaffee Schaufel.svg" alt="" srcset="">
+          <p>gemahlen</p>
+        </div>
+      </div>
+    </div>
+    <div class="description">
+      <h3 class="description__header">Beschreibung</h3>
+      <p class="description__text">MAYA Hochlandkaffee von MAYA Kaffee 1991 wird an den Hängen der Sierra Madre de
+        Chiapas angebaut, ein Gebirgszug, der sich entlang der Pazifikküste im Süden Mexikos erstreckt. Hier haben sich
+        indianische Kleinbauern mit Anbauflächen von ein bis drei Hektar Land in Kooperativen zusammengeschlossen und
+        verzichten komplett auf Industriedünger und Pestizide. Schonend geröstet, entwickelt diese einzigartige
+        Spezialität ein überraschend vielschichtiges Aromenspiel mit deutlichen Noten von Haselnuss. Als klassischer
+        Aufguss ist unser MAYA Filterkaffee besonders ergiebig. 100% BIO aus kontrolliert ökologischem Anbau. DE-ÖKO-003
+        / Nicht-EU-Landwirtschaft.</p>
+    </div>
+  </div>
+  <div class="product-container">
+    <div class="text-container">
+      <h2>Entdecke unsere Kaffee Sorten</h2>
+      <div class="product-container__products">
+        <div class="product-container__product">
+          <div class="product-container__image">
+            <img src="../images/FEND_Coffee_Costa-Rica 2.webp" alt="">
+          </div>
+          <p class="product-container__label">Costa Rica</p>
+          <p class="product-container__price">6,90€ – 26,90€</p>
+          <div class="product-container__icons">
+            <img src="../images/icons/Icon Kaffee Bohnen.svg" alt="">
+            <img src="../images/icons/Icon French Press.svg" alt="">
+            <img src="../images/icons/Icon Kaffee Schaufel.svg" alt="">
+          </div>
+        </div>
+        <div class="product-container__product">
+          <div class="product-container__image">
+            <img src="../images/FEND_Coffee_Costa-Rica 2.webp" alt="">
+          </div>
+          <p class="product-container__label">Costa Rica</p>
+          <p class="product-container__price">6,90€ – 26,90€</p>
+          <div class="product-container__icons">
+            <img src="../images/icons/Icon Kaffee Bohnen.svg" alt="">
+            <img src="../images/icons/Icon French Press.svg" alt="">
+            <img src="../images/icons/Icon Kaffee Schaufel.svg" alt="">
+          </div>
+        </div>
+        <div class="product-container__product">
+          <div class="product-container__image">
+            <img src="../images/FEND_Coffee_Costa-Rica 2.webp" alt="">
+          </div>
+          <p class="product-container__label">Costa Rica</p>
+          <p class="product-container__price">6,90€ – 26,90€</p>
+          <div class="product-container__icons">
+            <img src="../images/icons/Icon Kaffee Bohnen.svg" alt="">
+            <img src="../images/icons/Icon French Press.svg" alt="">
+            <img src="../images/icons/Icon Kaffee Schaufel.svg" alt="">
+          </div>
+        </div>
+        <div class="product-container__product">
+          <div class="product-container__image">
+            <img src="../images/FEND_Coffee_Costa-Rica 2.webp" alt="">
+          </div>
+          <p class="product-container__label">Costa Rica</p>
+          <p class="product-container__price">6,90€ – 26,90€</p>
+          <div class="product-container__icons">
+            <img src="../images/icons/Icon Kaffee Bohnen.svg" alt="">
+            <img src="../images/icons/Icon French Press.svg" alt="">
+            <img src="../images/icons/Icon Kaffee Schaufel.svg" alt="">
+          </div>
+        </div>
+        <div class="product-container__product">
+          <div class="product-container__image">
+            <img src="../images/FEND_Coffee_Costa-Rica 2.webp" alt="">
+          </div>
+          <p class="product-container__label">Costa Rica</p>
+          <p class="product-container__price">6,90€ – 26,90€</p>
+          <div class="product-container__icons">
+            <img src="../images/icons/Icon Kaffee Bohnen.svg" alt="">
+            <img src="../images/icons/Icon French Press.svg" alt="">
+            <img src="../images/icons/Icon Kaffee Schaufel.svg" alt="">
+          </div>
+        </div>
+        <div class="product-container__product">
+          <div class="product-container__image">
+            <img src="../images/FEND_Coffee_Costa-Rica 2.webp" alt="">
+          </div>
+          <p class="product-container__label">Costa Rica</p>
+          <p class="product-container__price">6,90€ – 26,90€</p>
+          <div class="product-container__icons">
+            <img src="../images/icons/Icon Kaffee Bohnen.svg" alt="">
+            <img src="../images/icons/Icon French Press.svg" alt="">
+            <img src="../images/icons/Icon Kaffee Schaufel.svg" alt="">
+          </div>
+        </div>
+        <div class="product-container__product">
+          <div class="product-container__image">
+            <img src="../images/FEND_Coffee_Costa-Rica 2.webp" alt="">
+          </div>
+          <p class="product-container__label">Costa Rica</p>
+          <p class="product-container__price">6,90€ – 26,90€</p>
+          <div class="product-container__icons">
+            <img src="../images/icons/Icon Kaffee Bohnen.svg" alt="">
+            <img src="../images/icons/Icon French Press.svg" alt="">
+            <img src="../images/icons/Icon Kaffee Schaufel.svg" alt="">
+          </div>
+        </div>
+        <div class="product-container__product">
+          <div class="product-container__image">
+            <img src="../images/FEND_Coffee_Costa-Rica 2.webp" alt="">
+          </div>
+          <p class="product-container__label">Costa Rica</p>
+          <p class="product-container__price">6,90€ – 26,90€</p>
+          <div class="product-container__icons">
+            <img src="../images/icons/Icon Kaffee Bohnen.svg" alt="">
+            <img src="../images/icons/Icon French Press.svg" alt="">
+            <img src="../images/icons/Icon Kaffee Schaufel.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="product-container__all-products-button">
+      <a href="#">alle Produkte</a>
+    </div>
+  </div>
+  {{> footer}}
+  <script>
+    let formSuc = () => {
+      alert("Form Clicked");
+    }
+  </script>
+  <script src="../scripts/navbar.js"></script>
+  <script src="/scripts/image-slider.js" type="module"></script>
+</body>
+
+</html>
