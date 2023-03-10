@@ -122,6 +122,10 @@
   background: white;
   width: 100%;
   height: auto;
+
+  &:hover {
+    background: $gold-brown;
+  }
 }
 
 .product-container__image img {
