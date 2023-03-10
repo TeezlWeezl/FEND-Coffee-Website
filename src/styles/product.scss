@@ -29,6 +29,11 @@
 // Styling of Product Overview
 .product-overview {
   margin-top: 75px;
+
+  @include media(">=desktop") {
+    display: flex;
+    gap: 120px;
+  }
 }
 
 .product-overview__img {
@@ -37,6 +42,14 @@
 
 .product-overview__specs {
   margin-top: 33px;
+
+  .product-info {
+    width: 100%;
+
+    @include media(">=desktop") {
+      width: 60%;
+    }
+  }
 
   h2 {
     margin-top: 0;
@@ -58,6 +71,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include media(">=desktop") {
+      flex-direction: row;
+      gap: 13px;
+      justify-content: flex-start;
+    }
   }
 
   .select-wraper {
@@ -66,6 +85,10 @@
     border-radius: 5px;
     margin-top: 40px;
     width: 100%;
+
+    @include media(">=desktop") {
+      width: 60%;
+    }
 
     .spec-select__select {
       padding: 15px 0px 14px 25px;
@@ -119,11 +142,13 @@
     }
 
     .spec-select__select:focus {
-      & + .select-content { // + (plus sign): selects an element immediately following another element
+      & + .select-content {
+        // + (plus sign): selects an element immediately following another element
         background-color: white;
       }
 
-      & ~ .select-arrow { // ~ (tilde): selects all elements that follow another element, regardless of their 
+      & ~ .select-arrow {
+        // ~ (tilde): selects all elements that follow another element, regardless of their
         span {
           transform: rotate(270deg) translateY(-3px);
         }
@@ -138,11 +163,13 @@
     border-radius: 10px;
     padding: 15px 50px;
     margin-top: 44px;
-    display: flex;
+
+    @include media(">=desktop") {
+    }
   }
 }
 
-.product-overview__spec-icons {
+.spec-select__spec-icons {
   margin-top: 114px;
   display: flex;
   gap: 10px;
@@ -166,6 +193,11 @@
   .description__text {
     margin-top: 20px;
   }
+
+  @include media(">=desktop") {
+    width: 40vw;
+    margin: 125px auto 0 auto;
+  }
 }
 
 .product-container {
@@ -180,7 +212,6 @@
     width: 15ch;
   }
 }
-
 
 .product-container__products {
   margin-top: 40px;
@@ -275,7 +306,6 @@
 }
 
 @include media(">=desktop") {
-  
   .product-container {
     margin-top: 100px;
   }
