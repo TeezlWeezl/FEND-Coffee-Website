@@ -26,6 +26,82 @@
   }
 }
 
+// Shopping cart later to be outsourced to scss partial
+.cart {
+  position: fixed;
+  background: white;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+
+  .cart__header {
+    margin-top: 102px;
+    margin-bottom: 38px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    h2 {
+      margin-top: 0;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  .cart__product {
+    display: flex;
+    margin-top: 38px;
+    padding-bottom: 38px;
+    border-bottom: 2px solid #e9e9e9;
+    gap: 20px;
+  }
+
+  .cart__product > .product__img {
+    width: 50%;
+    background: $gold-brown;
+  }
+
+  .cart__product > .product__specs {
+    width: 50%;
+    position: relative;
+
+    .specs__header {
+      margin-top: 0;
+    }
+
+    .specs__grind-info {
+      margin-top: 20px;
+    }
+
+    .specs__size-info {
+      margin-top: 0;
+    }
+
+    .specs__delivery-info {
+      font-weight: bold;
+    }
+
+    .specs__price {
+      margin-top: 5px;
+      font-size: large;
+    }
+
+    .specs__remove-item {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+    }
+  }
+}
+
 // Styling of Product Overview
 .product-overview {
   margin-top: 75px;
