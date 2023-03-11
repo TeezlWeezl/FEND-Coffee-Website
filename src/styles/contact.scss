@@ -29,8 +29,24 @@
 .contact-form {
   margin-bottom: 40px;
 
+  @include media('>=desktop') {
+    display: flex;
+    justify-content: space-between;
+  }
+
   h2 {
     margin-top: 78px;
+
+    @include media('>=desktop') {
+      width: 50%;
+    }
+  }
+
+  form {
+    @include media('>=desktop') {
+      width: 50%;
+      margin-top: 78px;
+    }
   }
 
   form * {
@@ -45,14 +61,14 @@
     border: none;
     border-bottom: 2px solid;
     padding: 12px 25px 10px 19px;
+
+    &:focus {
+      background-color: #e9e9e9;
+    }
   }
 
   .name-label {
     margin-top: 34px;
-  }
-
-  .name-input {
-    background-color: #e9e9e9;
   }
 
   .email-label {

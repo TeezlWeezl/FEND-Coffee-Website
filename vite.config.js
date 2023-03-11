@@ -16,7 +16,8 @@ module.exports = defineConfig({
         impressum: resolve(__dirname, 'src/impressum/index.html'),
         contact: resolve(__dirname, 'src/contact/index.html'),
         location: resolve(__dirname, 'src/shop/index.html'),
-        todoList: resolve(__dirname, 'src/todo-list/index.html')
+        todoList: resolve(__dirname, 'src/todo-list/index.html'),
+        product: resolve(__dirname, 'src/product/index.html')
       }
     }
   },
