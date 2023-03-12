@@ -39,6 +39,10 @@
   width: 100%;
   overflow: scroll;
 
+  .nav-bar {
+    z-index: 3;
+  }
+
   .cart__header {
     margin-top: 102px;
     margin-bottom: 38px;
@@ -99,6 +103,57 @@
       bottom: 20px;
       right: 20px;
     }
+  }
+
+  .order-overview {
+    background: #1a1a1a;
+    color: white;
+    padding-top: 51px;
+    height: 407px;
+    position: relative;
+
+    .order-overview__header {
+      margin-top: 0;
+    }
+
+    .order-overview__subtotal,
+    .order-overview__delivery-costs,
+    .order-overview__total {
+      display: flex;
+      justify-content: space-between;
+      padding-right: 47px;
+
+      p {
+        margin-top: 0;
+      }
+    }
+
+    .order-overview__subtotal {
+      margin-top: 35px;
+    }
+
+    .order-overview__delivery-costs {
+      margin-top: 25px;
+      padding-bottom: 33px;
+      border-bottom: 1px solid #E9E9E9;
+    }
+
+    .order-overview__total {
+      margin-top: 35px;
+    }
+
+    .order-overview__pay {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      border: none;
+      border-radius: 5px;
+      padding: 15px 50px;
+      background: #D7BE9D;
+    }
+
   }
 }
 
