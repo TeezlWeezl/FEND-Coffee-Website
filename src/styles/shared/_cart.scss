@@ -1,0 +1,138 @@
+// Shopping cart later to be outsourced to scss partial
+.cart--hidden {
+  display: none;
+}
+
+.cart {
+  position: fixed;
+  background: white;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+
+  .price::after {
+    content: ' €';
+  }
+
+  .nav-bar {
+    z-index: 3;
+  }
+
+  .cart__header {
+    margin-top: 102px;
+    margin-bottom: 38px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    h2 {
+      margin-top: 0;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  .cart__product {
+    display: flex;
+    margin-top: 38px;
+    padding-bottom: 38px;
+    border-bottom: 2px solid #e9e9e9;
+    gap: 20px;
+  }
+
+  .cart__product > .product__img {
+    width: 50%;
+    background: $gold-brown;
+  }
+
+  .cart__product > .product__specs {
+    width: 50%;
+    position: relative;
+
+    .specs__header {
+      margin-top: 0;
+    }
+
+    .specs__grind-info {
+      margin-top: 20px;
+    }
+
+    .specs__size-info {
+      margin-top: 0;
+    }
+
+    .specs__delivery-info {
+      font-weight: bold;
+    }
+
+    .specs__price {
+      margin-top: 5px;
+      font-size: large;
+    }
+
+    .specs__remove-item {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+    }
+  }
+
+  .order-overview {
+    background: #1a1a1a;
+    color: white;
+    padding-top: 51px;
+    height: 407px;
+    position: relative;
+
+    .order-overview__header {
+      margin-top: 0;
+    }
+
+    .order-overview__subtotal,
+    .order-overview__delivery-costs,
+    .order-overview__total {
+      display: flex;
+      justify-content: space-between;
+      padding-right: 47px;
+
+      p {
+        margin-top: 0;
+      }
+    }
+
+    .order-overview__subtotal {
+      margin-top: 35px;
+    }
+
+    .order-overview__delivery-costs {
+      margin-top: 25px;
+      padding-bottom: 33px;
+      border-bottom: 1px solid #E9E9E9;
+    }
+
+    .order-overview__total {
+      margin-top: 35px;
+    }
+
+    .order-overview__pay {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      border: none;
+      border-radius: 5px;
+      padding: 15px 50px;
+      background: #D7BE9D;
+    }
+
+  }
+}
