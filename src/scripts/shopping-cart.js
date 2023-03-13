@@ -46,7 +46,7 @@ for (const item of productsGet) {
   productsHTML += `
     <div class="cart__product">
     <div class="product__img">
-      <img src="../images/FEND_Coffee_Costa-Rica 2.webp" alt="">
+      <img src="/images/FEND_Coffee_Costa-Rica 2.webp" alt="">
     </div>
     <div class="product__specs">
       <h3 class="specs__header">${item.prodName}</h3>
