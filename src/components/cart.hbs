@@ -1,34 +1,37 @@
-<div class="cart">
-{{!-- <div class="cart cart--hidden"> --}}
-  {{> navbar}}
-  <div class="text-container">
-    <div class="cart__header">
-      <h2>Warenkorb</h2>
-      <p id="product-counter"></p>
-    </div>
-    <div class="cart__products" id="products"></div>
-  </div>
-  <div class="order-overview">
+{{!-- <div class="cart" id="cart"> --}}
+  <div class="cart cart--hidden" id="cart">
+    {{> navbar}}
     <div class="text-container">
-      <h2 class="order-overview__header">
-        Bestellübersicht
-      </h2>
-      <div class="order-overview__subtotal">
-        <p>Zwischensumme</p>
-        <p class="price" id="subtotal"></p>
+      <div class="cart__header">
+        <h2>Warenkorb</h2>
+        <p id="product-counter"></p>
       </div>
-      <div class="order-overview__delivery-costs">
-        <p>Versandkosten</p>
-        <p class="price" id="delivery-costs"></p>
+      <div class="cart__products" id="products"></div>
+      <div class="back-to-shop">
+        <a id="back-to-shop" href="../shop/">weiter einkaufen</a>
       </div>
-      <div class="order-overview__total">
-        <p>Gesamtbetrag</p>
-        <p class="price" id="total"></p>
-      </div>
-      <button class="order-overview__pay">
-        bezahlen
-      </button>
     </div>
+    <div class="order-overview">
+      <div class="text-container">
+        <h2 class="order-overview__header">
+          Bestellübersicht
+        </h2>
+        <div class="order-overview__subtotal">
+          <p>Zwischensumme</p>
+          <p class="price" id="subtotal"></p>
+        </div>
+        <div class="order-overview__delivery-costs">
+          <p>Versandkosten</p>
+          <p class="price" id="delivery-costs"></p>
+        </div>
+        <div class="order-overview__total">
+          <p>Gesamtbetrag</p>
+          <p class="price" id="total"></p>
+        </div>
+        <button class="order-overview__pay">
+          bezahlen
+        </button>
+      </div>
+    </div>
+    {{> footer}}
   </div>
-  {{> footer}}
-</div>

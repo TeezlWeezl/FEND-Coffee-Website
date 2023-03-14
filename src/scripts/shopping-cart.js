@@ -1,49 +1,55 @@
-// Test Data for local Storage
+// Set up test Data for local Storage (to be deleted)
+// if (!localStorage.getItem('products')) {
+//   const productsSet = [
+//     {
+//       prodID: 0,
+//       prodName: 'Produkt 1',
+//       grind: true,
+//       size: 250,
+//       price: 1099
+//     },
+//     {
+//       prodID: 1,
+//       prodName: 'Produkt 2',
+//       grind: false,
+//       size: 250,
+//       price: 1099
+//     },
+//     {
+//       prodID: 2,
+//       prodName: 'Produkt 3',
+//       grind: true,
+//       size: 250,
+//       price: 1099
+//     },
+//   ]
 
-const productsSet = [
-  {
-    prodID: 0,
-    prodName: 'Produkt 1',
-    grind: true,
-    size: '250g',
-    price: 1099
-  },
-  {
-    prodID: 1,
-    prodName: 'Produkt 2',
-    grind: false,
-    size: '250g',
-    price: 1099
-  },
-  {
-    prodID: 2,
-    prodName: 'Produkt 3',
-    grind: true,
-    size: '250g',
-    price: 1099
-  },
-]
+//   localStorage.setItem('products', JSON.stringify(productsSet))
+// }
 
-localStorage.setItem('products', JSON.stringify(productsSet))
+if (!localStorage.getItem('products')) {
+  localStorage.setItem('products', JSON.stringify([]))
+}
 
-// Getting items back from localStorage
-const productsGet = JSON.parse(localStorage.getItem('products'))
-const productCounter = document.getElementById('product-counter')
-const productsContainer = document.getElementById('products')
-let productsHTML = ''
-let subtotal = 0
-let deliveryCosts = 0
-const subtotalEl = document.getElementById('subtotal')
-const deliveryCostsEl = document.getElementById('delivery-costs')
-const totalEl = document.getElementById('total')
+export default function renderCart() {
+  // Getting items back from localStorage
+  const productsGet = JSON.parse(localStorage.getItem('products'))
+  const productCounter = document.getElementById('product-counter')
+  const productsContainer = document.getElementById('products')
+  let productsHTML = ''
+  let subtotal = 0
+  let deliveryCosts = 0
+  const subtotalEl = document.getElementById('subtotal')
+  const deliveryCostsEl = document.getElementById('delivery-costs')
+  const totalEl = document.getElementById('total')
 
-// Setting the value of the Product counter
-productCounter.innerText = `${productsGet.length} Produkte`
+  // Setting the value of the Product counter
+  productCounter.innerText = `${productsGet.length} Produkte`
 
-// Setting up the Products 
-for (const item of productsGet) {
-  subtotal += item.price
-  productsHTML += `
+  // Setting up the Products 
+  for (const item of productsGet) {
+    subtotal += item.price
+    productsHTML += `
     <div class="cart__product">
     <div class="product__img">
       <img src="/images/FEND_Coffee_Costa-Rica 2.webp" alt="">
@@ -58,22 +64,23 @@ for (const item of productsGet) {
     </div>
   </div>
   `
+  }
+  productsContainer.innerHTML = productsHTML
+
+  // Setting values for the order-overview
+  subtotalEl.innerText = (subtotal / 100).toFixed(2).toString().replace('.', ',')
+
+  switch (true) {
+    case productsGet.length <= 1:
+      deliveryCosts = 790
+      break
+    case productsGet.length <= 2:
+      deliveryCosts = 590
+      break
+    default:
+      deliveryCosts = 390
+  }
+
+  deliveryCostsEl.innerText = (deliveryCosts / 100).toFixed(2).toString().replace('.', ',')
+  totalEl.innerText = ((subtotal + deliveryCosts) / 100).toFixed(2).toString().replace('.', ',')
 }
-productsContainer.innerHTML = productsHTML
-
-// Setting values for the order-overview
-subtotalEl.innerText = (subtotal / 100).toFixed(2).toString().replace('.', ',')
-
-switch (true) {
-  case productsGet.length <= 1:
-    deliveryCosts = 790
-    break
-  case productsGet.length <= 2:
-    deliveryCosts = 590
-    break
-  default:
-    deliveryCosts = 390
-}
-
-deliveryCostsEl.innerText = (deliveryCosts / 100).toFixed(2).toString().replace('.', ',')
-totalEl.innerText = ((subtotal + deliveryCosts) / 100).toFixed(2).toString().replace('.', ',')

@@ -26,21 +26,21 @@
             umschmeichelt ein
             vollmundiges Haselnussaroma. Gleich probieren!</p>
         </div>
-        <form action="" class="spec-select" onsubmit="formSuc()">
+        <form action="" class="spec-select" id="add-product-form">
           <div class="select-wraper">
-            <select class="spec-select__select" name="spec" id="spec">
+            <select class="spec-select__select" name="spec" id="add-product-select">
               <option value="" disabled selected>wie viel Kaffee brauchst du?</option>
-              <option value="250-G">250g gemahlen</option>
-              <option value="500-G">500g gemahlen</option>
-              <option value="250-B">250g Bohnen</option>
-              <option value="500-B">500g Bohnen</option>
+              <option value="100-250-G">250g gemahlen</option>
+              <option value="100-500-G">500g gemahlen</option>
+              <option value="100-250-B">250g Bohnen</option>
+              <option value="100-500-B">500g Bohnen</option>
             </select>
             <div class="select-content"></div>
             <div class="select-arrow">
               <span>›</span>
             </div>
           </div>
-          <button type="submit" class="spec-select__submit">In den Warenkorb</button>
+          <button type="submit" class="spec-select__submit" id="add-product-submit">In den Warenkorb</button>
         </form>
         <div class="spec-select__spec-icons">
           <div class="spec-icons__icon">
@@ -184,6 +184,7 @@
   <script src="/scripts/navbar.js" type="module"></script>
   <script src="/scripts/image-slider.js" type="module"></script>
   <script src="/scripts/shopping-cart.js" type="module"></script>
+  <script src="/scripts/product.js" type="module"></script>
 </body>
 
 </html>
