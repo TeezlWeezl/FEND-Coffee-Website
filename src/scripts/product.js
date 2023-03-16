@@ -13,6 +13,7 @@ addProductSubmit.addEventListener('click', (e) => {
     const [pID, size, grind] = value.split('-')
     let newProductName = ''
     let newProductPrice = ''
+    
     // simuliert Datenbankabfrage anhand der product ID
     if (parseInt(pID) === 100) {
       newProductName = 'Costa Rica'

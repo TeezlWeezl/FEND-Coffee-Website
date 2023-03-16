@@ -31,24 +31,24 @@ if (!localStorage.getItem('products')) {
   localStorage.setItem('products', JSON.stringify([]))
 }
 
-// Getting items back from localStorage
-const productsGet = JSON.parse(localStorage.getItem('products'))
-const productCounter = document.getElementById('product-counter')
-const productsContainer = document.getElementById('products')
-const subtotalEl = document.getElementById('subtotal')
-const deliveryCostsEl = document.getElementById('delivery-costs')
-const totalEl = document.getElementById('total')
 
 export default function renderCart() {
+  // Getting items back from localStorage
+  const products = JSON.parse(localStorage.getItem('products'))
+  const productCounter = document.getElementById('product-counter')
+  const productsContainer = document.getElementById('products')
+  const subtotalEl = document.getElementById('subtotal')
+  const deliveryCostsEl = document.getElementById('delivery-costs')
+  const totalEl = document.getElementById('total')
   let productsHTML = ''
   let subtotal = 0
   let deliveryCosts = 0
 
   // Setting the value of the Product counter
-  productCounter.innerText = `${productsGet.length} Produkte`
+  productCounter.innerText = `${products.length} Produkte`
 
   // Setting up the Products 
-  productsGet.forEach((item, i) => {
+  products.forEach((item, i) => {
 
     subtotal += item.price
     productsHTML += `
@@ -74,10 +74,10 @@ export default function renderCart() {
   subtotalEl.innerText = (subtotal / 100).toFixed(2).toString().replace('.', ',')
 
   switch (true) {
-    case productsGet.length <= 1:
+    case products.length <= 1:
       deliveryCosts = 790
       break
-    case productsGet.length <= 2:
+    case products.length <= 2:
       deliveryCosts = 590
       break
     default:
@@ -87,15 +87,16 @@ export default function renderCart() {
   deliveryCostsEl.innerText = (deliveryCosts / 100).toFixed(2).toString().replace('.', ',')
   totalEl.innerText = ((subtotal + deliveryCosts) / 100).toFixed(2).toString().replace('.', ',')
 
-  registerRemoveButtons()
+  registerRemoveButtons(products)
 }
 
+// registers the remove buttons on the cart product item
 const registerRemoveButtons = (productsList) => {
   for (const btn of document.querySelectorAll('.specs__remove-item')) {
     btn.addEventListener('click', (e) => {
       const cartIndex = btn.getAttribute('cart-position')
-      productsGet.splice(parseInt(cartIndex), 1)
-      localStorage.setItem('products', productsGet)
+      productsList.splice(parseInt(cartIndex), 1)
+      localStorage.setItem('products', JSON.stringify(productsList))
       renderCart()
     })
   }
