@@ -31,7 +31,6 @@ if (!localStorage.getItem('products')) {
   localStorage.setItem('products', JSON.stringify([]))
 }
 
-
 export default function renderCart() {
   // Getting items back from localStorage
   const products = JSON.parse(localStorage.getItem('products'))

@@ -1,3 +1,5 @@
+import updateCounter from "./updateCounter"
+
 // If screen is desktopSize enable quick add buttons
 if (matchMedia('(min-width: 992px)').matches) {
   const productAction = document.querySelectorAll('.product-action')
@@ -59,6 +61,9 @@ if (matchMedia('(min-width: 992px)').matches) {
 
         // Hide buttons after clicked
         specSelect.classList.add('product-action__spec-select--hidden')
+
+        // update the counter after choosing the size
+        updateCounter()
       })
     }
   })
