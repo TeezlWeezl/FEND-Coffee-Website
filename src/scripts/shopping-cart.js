@@ -53,7 +53,7 @@ export default function renderCart() {
     productsHTML += `
     <div class="cart__product">
       <div class="product__img">
-        <img src="/images/FEND_Coffee_Costa-Rica 2.webp" alt="">
+        <img src="/assets/FEND_Coffee_Costa-Rica 2.webp" alt="">
       </div>
       <div class="product__specs">
         <h3 class="specs__header">${item.prodName}</h3>
@@ -61,7 +61,7 @@ export default function renderCart() {
         <p class="specs__size-info">${item.size}</p>
         <p class="specs__delivery-info">sofort versandbereit</p>
         <p class="specs__price price">${(item.price / 100).toFixed(2).toString().replace('.', ',')}</p>
-        <button class="specs__remove-item" cart-position=${i}><img src="/images/icons/burger-menu-close.svg"></button>
+        <button class="specs__remove-item" cart-position=${i}><img src="/assets/burger-menu-close.svg"></button>
       </div>
     </div>
   `
