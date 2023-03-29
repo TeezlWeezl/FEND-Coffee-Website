@@ -1,5 +1,4 @@
 import renderCart from './shopping-cart'
-import updateCounter from './updateCounter'
 
 // toggle the display for the navbar mobile view 
 const navLinks = document.getElementById('nav-links')
@@ -19,12 +18,15 @@ for (const el of burgerMenu) {
 }
 
 // Update the counter when the navbar is rendered for the first time
-updateCounter()
+renderCart()
 
 // Register click event to toggle the sopping cart in desktop view
 const cartIcon = document.getElementById('shopping-cart-icon')
 const cart = document.getElementById('cart')
-cartIcon.addEventListener('click', () => {
-  renderCart()
-  cart.classList.toggle('cart--hidden')
+cartIcon.addEventListener('click', (e) => {
+  const productsAmountInCart = JSON.parse(localStorage.getItem('products')).length
+  // toggle cart only if the cart is not empty
+  if (productsAmountInCart > 0) {
+    cart.classList.toggle('cart--hidden')
+  }
 })

@@ -1,31 +1,4 @@
-// Set up test Data for local Storage (to be deleted)
-// if (!localStorage.getItem('products')) {
-//   const productsSet = [
-//     {
-//       prodID: 0,
-//       prodName: 'Produkt 1',
-//       grind: true,
-//       size: 250,
-//       price: 1099
-//     },
-//     {
-//       prodID: 1,
-//       prodName: 'Produkt 2',
-//       grind: false,
-//       size: 250,
-//       price: 1099
-//     },
-//     {
-//       prodID: 2,
-//       prodName: 'Produkt 3',
-//       grind: true,
-//       size: 250,
-//       price: 1099
-//     },
-//   ]
-
-//   localStorage.setItem('products', JSON.stringify(productsSet))
-// }
+import updateCounter from "./updateCounter"
 
 if (!localStorage.getItem('products')) {
   localStorage.setItem('products', JSON.stringify([]))
@@ -33,6 +6,7 @@ if (!localStorage.getItem('products')) {
 
 export default function renderCart() {
   // Getting items back from localStorage
+  const cart = document.getElementById('cart')
   const products = JSON.parse(localStorage.getItem('products'))
   const productCounter = document.getElementById('product-counter')
   const productsContainer = document.getElementById('products')
@@ -48,7 +22,6 @@ export default function renderCart() {
 
   // Setting up the Products 
   products.forEach((item, i) => {
-
     subtotal += item.price
     productsHTML += `
     <div class="cart__product">
@@ -85,8 +58,20 @@ export default function renderCart() {
 
   deliveryCostsEl.innerText = (deliveryCosts / 100).toFixed(2).toString().replace('.', ',')
   totalEl.innerText = ((subtotal + deliveryCosts) / 100).toFixed(2).toString().replace('.', ',')
-
   registerRemoveButtons(products)
+  updateCounter()
+  document.getElementById('back-to-shop').addEventListener('click', (e) => {
+    cart.classList.toggle('cart--hidden')
+    document.getElementsByTagName('body')[0].style.overflow = 'visible'
+  })
+
+  // if no products in the cart hide the cart from user
+  if (products.length <= 0) {
+    cart.classList.add('cart--hidden')
+    document.getElementsByTagName('body')[0].style.overflow = 'visible'
+  } else {
+    document.getElementsByTagName('body')[0].style.overflow = 'hidden'
+  }
 }
 
 // registers the remove buttons on the cart product item

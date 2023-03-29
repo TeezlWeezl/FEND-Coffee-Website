@@ -1,4 +1,4 @@
-import updateCounter from "./updateCounter"
+import renderCart from "./shopping-cart"
 
 // If screen is desktopSize enable quick add buttons
 if (matchMedia('(min-width: 992px)').matches) {
@@ -55,15 +55,14 @@ if (matchMedia('(min-width: 992px)').matches) {
 
         // fetch product cart data from localStorage and append addProduct at the end
         let currentCart = JSON.parse(localStorage.getItem('products'))
-        console.log(typeof currentCart, currentCart);
         currentCart.push(addProduct)
         localStorage.setItem('products', JSON.stringify(currentCart))
 
         // Hide buttons after clicked
         specSelect.classList.add('product-action__spec-select--hidden')
 
-        // update the counter after choosing the size
-        updateCounter()
+        // renders the cart after choosing the package size
+        renderCart()
       })
     }
   })

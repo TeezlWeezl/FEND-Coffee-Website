@@ -12,6 +12,8 @@
 
 <body>
   {{> navbar}}
+  {{> cart}}
+
   <div class="text-container contact-form">
     <h2>Du hast Fragen? Schreib uns gern!</h2>
     <form action="" onsubmit="formSuc()">
@@ -23,11 +25,11 @@
       <input class="phone-input" type="text" name="phone" id="phone" placeholder="Telefonnummer">
       <div class="select-wraper">
         <select class="subject-select" name="subject" id="subject">
-            <option value="" disabled selected>Dein Betreff</option>
-            <option value="0">Frage zur Lieferung</option>
-            <option value="1">Frage zum Produkt</option>
-            <option value="2">Vertriebsfragen</option>
-            <option value="3">einfach nur so!</option>
+          <option value="" disabled selected>Dein Betreff</option>
+          <option value="0">Frage zur Lieferung</option>
+          <option value="1">Frage zum Produkt</option>
+          <option value="2">Vertriebsfragen</option>
+          <option value="3">einfach nur so!</option>
         </select>
         <div class="select-content"></div>
         <div class="select-arrow">
@@ -45,11 +47,14 @@
     </form>
   </div>
   {{> footer}}
-  <script>
+  <!-- <script>
     let formSuc = () => {
       alert("Form Clicked");
     }
-  </script>
+  </script> -->
+  <script src="../scripts/navbar.js" type="module"></script>
+  <script src="../scripts/shop.js" type="module"></script>
+  <script src="../scripts/contact.js" type="module"></script>
 </body>
 
 </html>

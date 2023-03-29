@@ -13,7 +13,7 @@
   right: 0;
   height: 100%;
   width: 100%;
-  overflow: scroll;
+  overflow: auto;
 
   .price::after {
     content: ' €';
@@ -107,6 +107,9 @@
     padding: 15px 50px;
     background-color: $off-black;
     color: white;
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .order-overview {
