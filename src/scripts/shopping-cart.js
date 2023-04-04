@@ -1,7 +1,7 @@
 import updateCounter from "./updateCounter"
 
 // import of images
-import productImage from "../images/FEND_Coffee_Costa-Rica 2.webp"
+import productImage from "../images/products/FEND_Coffee_Costa-Rica 2.webp"
 import deleteIcon from "../images/icons/burger-menu-close.svg"
 
 if (!localStorage.getItem('products')) {

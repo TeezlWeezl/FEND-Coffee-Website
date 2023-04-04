@@ -16,6 +16,7 @@ if (matchMedia('(min-width: 992px)').matches) {
       grind: '',
       size: '',
       price: '',
+      imgUrlName: '',
     }
 
     // Simuliert Datenbankabfrage
@@ -23,6 +24,7 @@ if (matchMedia('(min-width: 992px)').matches) {
       addProduct.prodName = 'Costa Rica'
       addProduct.price = 2690
       addProduct.grind = true
+      addProduct.imgUrlName = 'FEND_Coffee_Costa-Rica 2.png'
     }
 
     productImg.addEventListener('mouseenter', (e) => {
