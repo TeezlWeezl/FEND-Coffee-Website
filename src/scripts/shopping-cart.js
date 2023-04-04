@@ -1,5 +1,9 @@
 import updateCounter from "./updateCounter"
 
+// import of images
+import productImage from "../images/FEND_Coffee_Costa-Rica 2.webp"
+import deleteIcon from "../images/icons/burger-menu-close.svg"
+
 if (!localStorage.getItem('products')) {
   localStorage.setItem('products', JSON.stringify([]))
 }
@@ -26,7 +30,7 @@ export default function renderCart() {
     productsHTML += `
     <div class="cart__product">
       <div class="product__img">
-        <img src="/assets/FEND_Coffee_Costa-Rica 2.webp" alt="">
+        <img src="${productImage}" alt="">
       </div>
       <div class="product__specs">
         <h3 class="specs__header">${item.prodName}</h3>
@@ -34,7 +38,7 @@ export default function renderCart() {
         <p class="specs__size-info">${item.size}</p>
         <p class="specs__delivery-info">sofort versandbereit</p>
         <p class="specs__price price">${(item.price / 100).toFixed(2).toString().replace('.', ',')}</p>
-        <button class="specs__remove-item" cart-position=${i}><img src="/assets/burger-menu-close.svg"></button>
+        <button class="specs__remove-item" cart-position=${i}><img src="${deleteIcon}"></button>
       </div>
     </div>
   `

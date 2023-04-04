@@ -16,7 +16,7 @@
 
   <div class="text-container contact-form">
     <h2>Du hast Fragen? Schreib uns gern!</h2>
-    <form action="" onsubmit="formSuc()">
+    <form name="contactForm" action="">
       <label class="name-label" for="name">Name*</label>
       <input class="name-input" type="text" name="name" id="name" placeholder="Name">
       <label class="email-label" for="email">E-Mail*</label>
@@ -43,15 +43,10 @@
         <input class="privacy-policy__input" type="checkbox" name="privacy-policy">
         <label class="privacy-policy__label" for="privacy-policy">Ich aktzeptiere die Datenschutzerklärung</label>
       </div>
-      <button class="submit-button" type="submit" onclick="formSuc">abschicken</button>
+      <button class="submit-button" type="submit">abschicken</button>
     </form>
   </div>
   {{> footer}}
-  <!-- <script>
-    let formSuc = () => {
-      alert("Form Clicked");
-    }
-  </script> -->
   <script src="../scripts/navbar.js" type="module"></script>
   <script src="../scripts/shop.js" type="module"></script>
   <script src="../scripts/contact.js" type="module"></script>
