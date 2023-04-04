@@ -64,18 +64,12 @@ export default function renderCart() {
   totalEl.innerText = ((subtotal + deliveryCosts) / 100).toFixed(2).toString().replace('.', ',')
   registerRemoveButtons(products)
   updateCounter()
-  document.getElementById('back-to-shop').addEventListener('click', (e) => {
-    cart.classList.toggle('cart--hidden')
-    document.getElementsByTagName('body')[0].style.overflow = 'visible'
-  })
 
   // if no products in the cart hide the cart from user
-  if (products.length <= 0) {
-    cart.classList.add('cart--hidden')
-    document.getElementsByTagName('body')[0].style.overflow = 'visible'
-  } else {
-    document.getElementsByTagName('body')[0].style.overflow = 'hidden'
-  }
+  if (products.length <= 0) cart.classList.add('cart--hidden')
+
+  if (cart.classList.contains('cart--hidden')) document.getElementsByTagName('body')[0].style.overflow = 'visible'
+  else document.getElementsByTagName('body')[0].style.overflow = 'hidden'
 }
 
 // registers the remove buttons on the cart product item
