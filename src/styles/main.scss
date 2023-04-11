@@ -19,6 +19,10 @@
   justify-content: center;
   flex-direction: column;
   position: relative;
+
+  @include media(">=desktop") {
+    height: 65vh;
+  }
 }
 
 .coffee-heading {

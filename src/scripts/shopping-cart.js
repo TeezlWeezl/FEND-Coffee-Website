@@ -66,7 +66,9 @@ export default function renderCart() {
   updateCounter()
 
   // if no products in the cart hide the cart from user
-  if (products.length <= 0) cart.classList.add('cart--hidden')
+  if (products.length <= 0) {
+    cart.classList.add('cart--hidden')
+  }
 
   if (cart.classList.contains('cart--hidden')) document.getElementsByTagName('body')[0].style.overflow = 'visible'
   else document.getElementsByTagName('body')[0].style.overflow = 'hidden'

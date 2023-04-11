@@ -1,8 +1,10 @@
-document.forms['contactForm'].addEventListener('submit', (e) => {
+const contactForm = document.getElementById('contact-form')
 
-  console.log('Success');
-
+contactForm.addEventListener('submit', (e) => {
   e.preventDefault()
+
+  const action = e.target.getAttribute('action')
+
   const nameInput = e.target["name"]
   const emailInput = e.target["email"]
   const phoneInput = e.target["phone"]
@@ -24,6 +26,8 @@ document.forms['contactForm'].addEventListener('submit', (e) => {
     nameInput.setCustomValidity('')
   }
 
+  console.log(nameInput.checkValidity());
+
   // Validate Email field
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   if (email === '') {
@@ -34,13 +38,19 @@ document.forms['contactForm'].addEventListener('submit', (e) => {
     emailInput.setCustomValidity('')
   }
 
+  console.log(emailInput.checkValidity());
+
   // Validate Phone field
-  const phoneRegex = /^\d{10}$/
+  const phoneRegex = /^\d{10,}$/
   if (phone !== '' && !phoneRegex.test(phone)) {
+    console.log(phone);
     phoneInput.setCustomValidity('Please enter a valid 10-digit phone number')
   } else {
     phoneInput.setCustomValidity('')
+    console.log(phone);
   }
+
+  console.log(phoneInput.checkValidity());
 
   // Validate Subject field
   if (subject === '') {
@@ -49,12 +59,16 @@ document.forms['contactForm'].addEventListener('submit', (e) => {
     subjectInput.setCustomValidity('')
   }
 
+  console.log(subjectInput.checkValidity());
+
   // Validate Message field
   if (message === '') {
     messageInput.setCustomValidity('Please enter a message')
   } else {
     messageInput.setCustomValidity('')
   }
+
+  console.log(messageInput.checkValidity());
 
   // Validate Privacy Policy checkbox
   if (!privacyPolicy) {
@@ -63,10 +77,27 @@ document.forms['contactForm'].addEventListener('submit', (e) => {
     privacyPolicyInput.setCustomValidity('')
   }
 
+  console.log(privacyPolicyInput.checkValidity());
+
   // Submit form if all fields are valid
   if (nameInput.checkValidity() && emailInput.checkValidity() && phoneInput.checkValidity() && subjectInput.checkValidity() && messageInput.checkValidity() && privacyPolicyInput.checkValidity()) {
-    alert('Success')
+    location.href = 'https://formspree.io/thanks?language=de'
+    const formData = new FormData(contactForm)
+    fetch(action, (e), {
+      method: 'POST',
+      body: JSON.stringify(Object.fromEntries(formData)),
+      headers: { 'Content-Type': 'application/json' }
+    })
+      .then(res => { })
+      .catch(err => { })
   }
 
-  // console.log({ name, email, phone, subject, message, privacyPolicy })
+  // Reset customValidity if user changes after error
+  nameInput.addEventListener('input', (e) => { e.target.setCustomValidity('') })
+  emailInput.addEventListener('input', (e) => { e.target.setCustomValidity('') })
+  phoneInput.addEventListener('input', (e) => { e.target.setCustomValidity('') })
+  subjectInput.addEventListener('input', (e) => { e.target.setCustomValidity('') })
+  messageInput.addEventListener('input', (e) => { e.target.setCustomValidity('') })
+  privacyPolicyInput.addEventListener('change', (e) => { e.target.setCustomValidity('') })
+
 })

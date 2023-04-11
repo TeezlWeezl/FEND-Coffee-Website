@@ -28,5 +28,6 @@ cartIcon.addEventListener('click', (e) => {
   // toggle cart only if the cart is not empty
   if (productsAmountInCart > 0) {
     cart.classList.toggle('cart--hidden')
+    renderCart()
   }
 })

@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact</title>
   <link rel="stylesheet" href="../styles/contact.scss">
-  <script src="/scripts/navbar.js" type="module"></script>
 </head>
 
 <body>
@@ -16,17 +15,23 @@
 
   <div class="text-container contact-form">
     <h2>Du hast Fragen? Schreib uns gern!</h2>
-    <form name="contactForm" action="">
-      <label class="name-label" for="name">Name*</label>
-      <input class="name-input" type="text" name="name" id="name" placeholder="Name">
-      <label class="email-label" for="email">E-Mail*</label>
-      <input class="email-input" type="email" name="email" id="email" placeholder="E-Mail">
-      <label class="phone-label" for="phone">Telefonnummer</label>
-      <input class="phone-input" type="text" name="phone" id="phone" placeholder="Telefonnummer">
+    <form name="contactForm" id=contact-form action="https://formspree.io/f/xdovpdak" method="POST">
+      <label class="name-label" for="name">
+        Name*
+        <input class="name-input" type="text" name="name" id="name" placeholder="Name">
+      </label>
+      <label class="email-label" for="email">
+        E-Mail*
+        <input class="email-input" type="email" name="email" id="email" placeholder="E-Mail">
+      </label>
+      <label class="phone-label" for="phone">
+        Telefonnummer
+        <input class="phone-input" type="text" name="phone" id="phone" placeholder="Telefonnummer">
+      </label>
       <div class="select-wraper">
         <select class="subject-select" name="subject" id="subject">
           <option value="" disabled selected>Dein Betreff</option>
-          <option value="0">Frage zur Lieferung</option>
+          <option value="0" hidden>Frage zur Lieferung</option>
           <option value="1">Frage zum Produkt</option>
           <option value="2">Vertriebsfragen</option>
           <option value="3">einfach nur so!</option>
@@ -36,9 +41,11 @@
           <span>›</span>
         </div>
       </div>
-      <label class="message-label" for="message">Deine Nachricht</label>
-      <textarea class="message-text" name="message" id="message" cols="30" rows="10"
-        placeholder="Was hast du auf dem Herzen?"></textarea>
+      <label class="message-label" for="message">
+        Deine Nachricht
+        <textarea class="message-text" name="message" id="message" cols="30" rows="10"
+          placeholder="Was hast du auf dem Herzen?"></textarea>
+      </label>
       <div class="privacy-policy">
         <input class="privacy-policy__input" type="checkbox" name="privacy-policy">
         <label class="privacy-policy__label" for="privacy-policy">Ich aktzeptiere die Datenschutzerklärung</label>

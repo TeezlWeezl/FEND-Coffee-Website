@@ -47,6 +47,10 @@ a {
   font-size: 1.4rem;
   text-decoration: none;
 
+  &:visited {
+    // color: inherit;
+  }
+
   @include media(">=desktop") {
     font-size: 1.8rem;
   }

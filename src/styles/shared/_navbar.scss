@@ -113,6 +113,10 @@
       justify-content: center;
       align-items: center;
       gap: 20px;
+
+      a {
+        color: inherit;
+      }
     }
 
     .shopping-cart-icon__product-counter {

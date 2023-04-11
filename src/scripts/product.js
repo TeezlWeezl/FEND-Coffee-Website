@@ -35,7 +35,8 @@ addProductSubmit.addEventListener('click', (e) => {
     localStorage.setItem('products', newCart)
   }
 
+  cart.classList.toggle('cart--hidden')
+  
   // Renders the cart to the screen
   renderCart()
-  cart.classList.toggle('cart--hidden')
 })
